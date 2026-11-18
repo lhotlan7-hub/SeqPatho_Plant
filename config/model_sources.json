@@ -1,0 +1,20 @@
+{
+  "dna": {
+    "repo_id": "zhihan1996/DNABERT-2-117M",
+    "revision": "7ec60fe8d4258a77604201de68aa808088097c4d",
+    "weight_file": "pytorch_model.bin",
+    "sha256": "7ff39ec77a484dd01070a41bfd6e95cdd7247bec80fe357ab43a4be33687aeba",
+    "license": "Apache-2.0 license file present in snapshot; applicability to weight redistribution must be confirmed",
+    "source_url": "https://huggingface.co/zhihan1996/DNABERT-2-117M",
+    "historical_proof": "matching present local DNABERT2pkg weights; cache-generation revision not cryptographically logged"
+  },
+  "protein": {
+    "repo_id": "facebook/esm2_t30_150M_UR50D",
+    "revision": "a695f6045e2e32885fa60af20c13cb35398ce30c",
+    "weight_file": "model.safetensors",
+    "sha256": "c3f1da8aea53bddd32c246c86168c23b9fd72341fb9db9a94436f855f5053566",
+    "license": "MIT per model card",
+    "source_url": "https://huggingface.co/facebook/esm2_t30_150M_UR50D",
+    "historical_proof": "present local snapshot; cache 1100 historical reused plus 16 reencoded; historical exact snapshot not locked"
+  }
+}

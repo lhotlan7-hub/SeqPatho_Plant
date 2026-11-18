@@ -1,0 +1,66 @@
+{
+  "manuscript_version": "6.2",
+  "legacy_commit": "d16782030fcdc155ed4aef6581cab7f907f5da6e",
+  "sources": [
+    {
+      "file": "core/models.py",
+      "source": "20261102_primary_retraining/code/models.py",
+      "source_sha256": "aed61e9e1a9a4c5a413b13bcbeaa1a913e103c773f5fe68389028fd14af3d2f9",
+      "adaptation": "verbatim apart from line endings"
+    },
+    {
+      "file": "core/encode_sequences.py",
+      "source": "20261102_primary_retraining/code/encode_sequences.py",
+      "source_sha256": "d8348a2365e76d5ae951db46e4514d7802a33da5ff1b69fd384e0ba7715db922",
+      "adaptation": "verbatim apart from line endings"
+    },
+    {
+      "file": "core/run_cached_fold.py",
+      "source": "20261102_primary_retraining/code/run_cached_fold.py",
+      "source_sha256": "2928d3331b62a29986c1dd9697eabe42b682d6856b8acb518b836bd8652f448d",
+      "adaptation": "portable paths and CLI; see PROVENANCE.md"
+    },
+    {
+      "file": "core/run_experiment.py",
+      "source": "20261102_primary_retraining/code/run_experiment.py",
+      "source_sha256": "1483c7a112a9984fb90b17d0624a903e2b8b096364991b25fc4c482da0e449b1",
+      "adaptation": "portable paths and CLI; see PROVENANCE.md"
+    },
+    {
+      "file": "config/model_sources.json",
+      "source": "20261102_primary_retraining/provenance/model_sources.json",
+      "source_sha256": "9cded5cc40bf8a4ca430056c1882a72ec6edfed8fdf5a554651ebd99459fb295",
+      "adaptation": "verbatim apart from line endings"
+    },
+    {
+      "file": "analysis/reproduce_table3.py",
+      "source": "6.2_Seqpatho/release/reproduce_table3.py",
+      "source_sha256": "e9a6cc6bf72a4e25ab79d5b313d9123eb39efefe1358f694e9680df36da8fef7",
+      "adaptation": "portable paths and CLI; see PROVENANCE.md"
+    },
+    {
+      "file": "analysis/reproduce_table4.py",
+      "source": "6.2_Seqpatho/release/reproduce_table4.py",
+      "source_sha256": "363d50235d11cb008106a750cde40ba036e9dcabb5cd42b9f48a45b70cc24167",
+      "adaptation": "portable paths and CLI; see PROVENANCE.md"
+    },
+    {
+      "file": "analysis/run_pairing_shuffle.py",
+      "source": "6.2_Seqpatho/release/run_pairing_shuffle.py",
+      "source_sha256": "d4f15ed99eb12e8285c6a2ca6ce7da082af040e4ead4e57b78acc18eb7c4121c",
+      "adaptation": "portable paths and CLI; see PROVENANCE.md"
+    },
+    {
+      "file": "analysis/run_subgroup_analysis.py",
+      "source": "6.2_Seqpatho/release/run_subgroup_analysis.py",
+      "source_sha256": "fd2e6045278349b17e923c2dde43a6e73de02113edf41e9953b89701b1f38056",
+      "adaptation": "portable paths and CLI; see PROVENANCE.md"
+    },
+    {
+      "file": "analysis/check_subgroup_inputs.py",
+      "source": "6.2_Seqpatho/release/check_subgroup_inputs.py",
+      "source_sha256": "215a775234ebe6da9ba327886ac0ade6b14ea2130cde787e96c3850a22ce9a65",
+      "adaptation": "portable paths and CLI; see PROVENANCE.md"
+    }
+  ]
+}

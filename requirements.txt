@@ -1,0 +1,6 @@
+# Cached training and analysis environment (Python 3.10). Install a suitable PyTorch build separately.
+numpy==2.2.6
+pandas==2.3.3
+scipy==1.15.3
+scikit-learn==1.7.2
+torch==2.11.0

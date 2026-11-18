@@ -1,0 +1,40 @@
+{
+  "model": {
+    "dna_hidden_size": 768,
+    "protein_hidden_size": 640,
+    "bigru_hidden_size": 96,
+    "fusion_dim": 192,
+    "attention_hidden_size": 96,
+    "dropout": 0.35
+  },
+  "improvement": {
+    "dna_aux_loss_weight": 0.1,
+    "protein_aux_loss_weight": 0.1,
+    "gate_features": [
+      "dna",
+      "protein",
+      "absolute_difference",
+      "elementwise_product",
+      "protein_available"
+    ],
+    "branch_scale_normalization": "LayerNorm_then_L2_times_sqrt_dimension"
+  },
+  "frozen_training": {
+    "seeds": [
+      42,
+      43
+    ],
+    "epochs": 40,
+    "patience": 7,
+    "batch_size": 32,
+    "learning_rate": 0.0002,
+    "weight_decay": 0.0002,
+    "rc_consistency_weight": 0.1,
+    "early_stopping_metric": "val_auroc",
+    "gradient_clip_norm": 1.0,
+    "threshold_min": 0.05,
+    "threshold_max": 0.95,
+    "threshold_step": 0.01,
+    "num_workers": 0
+  }
+}
