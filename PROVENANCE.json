@@ -1,6 +1,4 @@
 {
-  "manuscript_version": "6.2",
-  "legacy_commit": "d16782030fcdc155ed4aef6581cab7f907f5da6e",
   "sources": [
     {
       "file": "core/models.py",
@@ -34,31 +32,31 @@
     },
     {
       "file": "analysis/reproduce_table3.py",
-      "source": "6.2_Seqpatho/release/reproduce_table3.py",
+      "source": "evaluation_archive/reproduce_table3.py",
       "source_sha256": "e9a6cc6bf72a4e25ab79d5b313d9123eb39efefe1358f694e9680df36da8fef7",
       "adaptation": "portable paths and CLI; see PROVENANCE.md"
     },
     {
       "file": "analysis/reproduce_table4.py",
-      "source": "6.2_Seqpatho/release/reproduce_table4.py",
+      "source": "evaluation_archive/reproduce_table4.py",
       "source_sha256": "363d50235d11cb008106a750cde40ba036e9dcabb5cd42b9f48a45b70cc24167",
       "adaptation": "portable paths and CLI; see PROVENANCE.md"
     },
     {
       "file": "analysis/run_pairing_shuffle.py",
-      "source": "6.2_Seqpatho/release/run_pairing_shuffle.py",
+      "source": "evaluation_archive/run_pairing_shuffle.py",
       "source_sha256": "d4f15ed99eb12e8285c6a2ca6ce7da082af040e4ead4e57b78acc18eb7c4121c",
       "adaptation": "portable paths and CLI; see PROVENANCE.md"
     },
     {
       "file": "analysis/run_subgroup_analysis.py",
-      "source": "6.2_Seqpatho/release/run_subgroup_analysis.py",
+      "source": "evaluation_archive/run_subgroup_analysis.py",
       "source_sha256": "fd2e6045278349b17e923c2dde43a6e73de02113edf41e9953b89701b1f38056",
       "adaptation": "portable paths and CLI; see PROVENANCE.md"
     },
     {
       "file": "analysis/check_subgroup_inputs.py",
-      "source": "6.2_Seqpatho/release/check_subgroup_inputs.py",
+      "source": "evaluation_archive/check_subgroup_inputs.py",
       "source_sha256": "215a775234ebe6da9ba327886ac0ade6b14ea2130cde787e96c3850a22ce9a65",
       "adaptation": "portable paths and CLI; see PROVENANCE.md"
     }

@@ -1,4 +1,4 @@
-"""Bind the code-only release to an external 6.2 evaluation archive."""
+"""Bind the code-only release to an external evaluation archive."""
 import argparse
 import hashlib
 import json
@@ -16,7 +16,7 @@ def sha256(path):
 def main():
     root = Path(__file__).resolve().parent.parent
     p = argparse.ArgumentParser(description=__doc__)
-    p.add_argument('--archive', type=Path, required=True, help='External 6.2 release directory')
+    p.add_argument('--archive', type=Path, required=True, help='External evaluation archive directory')
     p.add_argument('--embeddings', type=Path, help='Optional freshly encoded cache directory')
     p.add_argument('--output', type=Path, default=root / 'runtime_config.json')
     args = p.parse_args()

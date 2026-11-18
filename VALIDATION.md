@@ -1,6 +1,6 @@
 # Release checks — 18 November 2026
 
-Checks use the local manuscript 6.2 archive as external input. Data and generated results are not committed.
+Checks use the local evaluation archive as external input. Data and generated results are not committed.
 
 ## Passed
 

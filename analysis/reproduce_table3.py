@@ -46,7 +46,7 @@ AA = "ACDEFGHIKLMNPQRSTVWY"
 DINUC = [a + b for a in "ACGT" for b in "ACGT"]
 C_GRID = [0.003, 0.01, 0.03, 0.1, 0.3, 1.0, 3.0]
 
-# Pre-6.2 values, retained only for historical comparison.
+# Reference values retained only for historical comparison.
 HISTORICAL_TABLE3 = {
     "protein":     (0.634, 0.082, 0.835, 0.864, 1.14),
     "dna":         (0.488, 0.074, 0.746, 0.661, 0.88),

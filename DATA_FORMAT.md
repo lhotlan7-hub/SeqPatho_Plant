@@ -1,6 +1,6 @@
 # External inputs
 
-The required archive is the `release/` directory associated with manuscript 6.2. This code release does not include or download that archive. A fresh clone can run the synthetic tests; scientific analyses require the external inputs below.
+The required archive is the `release/` directory accompanying the manuscript. This code release does not include or download that archive. A fresh clone can run the synthetic tests; scientific analyses require the external inputs below.
 
 ## Matched training
 

@@ -6,14 +6,14 @@ import sys
 
 parser = argparse.ArgumentParser(add_help=False)
 parser.add_argument('--archive', type=Path, default=os.environ.get('SEQPATHO_ARCHIVE'),
-                    help='Path to the external 6.2 release archive (or SEQPATHO_ARCHIVE)')
+                    help='Path to the external evaluation archive (or SEQPATHO_ARCHIVE)')
 parser.add_argument('--out-dir', type=Path,
                     help='Output directory; default: outputs/<script name>')
 args, remaining = parser.parse_known_args()
 if '-h' in remaining or '--help' in remaining:
     parser.print_help()
     if Path(sys.argv[0]).name == 'reproduce_table3.py':
-        print('  --compare   Also compare against the historical, pre-6.2 table values.')
+        print('  --compare   Also compare against the historical reference table values.')
     raise SystemExit(0)
 if args.archive is None:
     parser.error('--archive is required; this repository contains code only')

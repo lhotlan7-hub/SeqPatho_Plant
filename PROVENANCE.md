@@ -1,6 +1,6 @@
 # Source provenance
 
-This selection corresponds to manuscript **6.2**, dated 18 November 2026. `PROVENANCE.json` records upstream file hashes and relative source labels for the copied code.
+This document describes the sources of the core implementation. `PROVENANCE.json` records upstream file hashes and relative source labels for the copied code.
 
 | Repository component | Source |
 |---|---|
@@ -8,9 +8,9 @@ This selection corresponds to manuscript **6.2**, dated 18 November 2026. `PROVE
 | Single-fold and multi-fold training | `20261102_primary_retraining/code/run_cached_fold.py`, `run_experiment.py` |
 | Frozen sequence encoding | `20261102_primary_retraining/code/encode_sequences.py` |
 | Training settings | Model, improvement and frozen-training sections of `20261102_primary_retraining/inputs/experiment_config.json` |
-| Baselines and supplementary analyses | `6.2_Seqpatho/release/` |
+| Baselines and supplementary analyses | the manuscript evaluation archive (`release/`) |
 
-The model source matches `20261029_135100_PrimaryCohortAudit_ProteinOnly/code/models.py` except for the optional checkpoint-saving parameter and save operation. Its mathematical computation is unchanged. The source experiment's primary OOF prediction file and the 6.2 archive's corresponding file have the same SHA-256.
+The model source matches `20261029_135100_PrimaryCohortAudit_ProteinOnly/code/models.py` except for the optional checkpoint-saving parameter and save operation. Its mathematical computation is unchanged. The source experiment's primary OOF prediction file and the evaluation archive's corresponding file have the same SHA-256.
 
 Packaging changes:
 
@@ -21,4 +21,4 @@ Packaging changes:
 5. Label Table 3's old comparison constants as historical; clarify that the pairing permutations can retain fixed points. Neither change affects computation.
 6. Include configuration, dependency files, input documentation and synthetic tests. Exclude datasets, feature caches, model weights, predictions and manuscript assets.
 
-The previous repository tree at `d16782030fcdc155ed4aef6581cab7f907f5da6e` is retained in Git history. This replacement does not publish the external evaluation archive or constitute a complete rerun of all manuscript experiments.
+The evaluation archive is an external input. Code publication does not constitute a complete rerun of all manuscript experiments.

@@ -1,10 +1,10 @@
-# SeqPatho-Plant: core code for manuscript 6.2
+# SeqPatho-Plant: core implementation
 
-Core implementation for **Matched Evaluation of DNA–Protein Fusion for Cross-Taxon Plant Pathogen Gene Prioritization: Simple Protein Baselines Suffice** (manuscript version 6.2, 18 November 2026).
+Core implementation for **Matched Evaluation of DNA–Protein Fusion for Cross-Taxon Plant Pathogen Gene Prioritization: Simple Protein Baselines Suffice**.
 
 The repository contains the matched DNA–protein and protein-only heads, frozen sequence encoding, cached training, and the principal baseline and supplementary analyses. The code corresponds to the 1,116-record evidence-linked cohort with the frozen `taxid_evidence_1116` partition.
 
-This is a **code-only release**. Sequence data, manifests, cached embeddings, checkpoints, prediction archives, figures and manuscript files are external inputs or generated outputs. They are not included in this repository. The commands below require the separately held manuscript 6.2 evaluation archive; a public download of that archive is not provided by this release. See [DATA_FORMAT.md](DATA_FORMAT.md) for the input contract.
+This is a **code-only release**. Sequence data, manifests, cached embeddings, checkpoints, prediction archives, figures and manuscript files are external inputs or generated outputs. They are not included in this repository. The commands below require the separately held evaluation archive accompanying the manuscript; a public download of that archive is not provided by this release. See [DATA_FORMAT.md](DATA_FORMAT.md) for the input contract.
 
 ## Core files
 
@@ -29,7 +29,7 @@ Use Python 3.10 and install the training/analysis dependencies:
 
 ```shell
 python -m pip install -r requirements.txt
-python core/prepare_config.py --archive /path/to/manuscript-6.2/release
+python core/prepare_config.py --archive /path/to/evaluation-archive
 python core/run_experiment.py --config runtime_config.json --name check_inputs --folds 0,1,2,3,4 --check
 python core/run_experiment.py --config runtime_config.json --name matched_run --folds 0,1,2,3,4 --device cpu
 ```
@@ -56,7 +56,7 @@ python analysis/run_subgroup_analysis.py --archive /path/to/release
 
 Outputs go to `outputs/<script-name>/`. Override this with `--out-dir`; input archives are never used as output directories. `SEQPATHO_ARCHIVE` can supply the archive path instead of `--archive`.
 
-Table 3 uses inner-validation selection of logistic-regression C and fits on inner training only. Its length row ranks directly by protein length. `--compare` is an optional comparison with the **historical pre-6.2 values**, retained from the original script. The computed results are the current analysis. Table S17 intentionally uses its own narrower C grid; it is not numerically interchangeable with the Table 3 concatenation row. Its permutations can retain fixed points and singletons.
+Table 3 uses inner-validation selection of logistic-regression C and fits on inner training only. Its length row ranks directly by protein length. `--compare` is an optional comparison with the **historical reference values**, retained from the original script. The computed results are the current analysis. Table S17 intentionally uses its own narrower C grid; it is not numerically interchangeable with the Table 3 concatenation row. Its permutations can retain fixed points and singletons.
 
 The Table 4 script covers four cached-feature methods. Original DTVF/VirulentHunter training, effector-tool integrations, historical experiments and figure-generation utilities are outside this core-code selection.
 
@@ -71,12 +71,10 @@ python core/prepare_config.py --archive /path/to/release --embeddings /path/to/n
 
 The encoder requires local snapshots and loads DNABERT-2 custom model code. It verifies sequence hashes, creates ordered embeddings and refuses to overwrite a nonempty output directory. Re-encoding can change embeddings and training results across software/device environments; full retraining is distinct from recomputing archived predictions. Dependency lists capture observed environments, not a fully resolved cross-platform lockfile.
 
-## Verification and history
+## Verification and provenance
 
 ```shell
 python -m unittest discover -s tests -v
 ```
 
 Tests cover masked-view behavior, protein-only independence from DNA, and both heads' training/checkpoint paths using synthetic inputs. See [VALIDATION.md](VALIDATION.md) for checks performed on this release, and [PROVENANCE.md](PROVENANCE.md) for source mapping and packaging changes.
-
-This revision replaces the old source tree. Previous code remains available in Git history at `d16782030fcdc155ed4aef6581cab7f907f5da6e`.
