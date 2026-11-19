@@ -1,8 +1,8 @@
 # SeqPatho-Plant: core implementation
 
-Core implementation for **Matched Evaluation of DNA–Protein Fusion for Cross-Taxon Plant Pathogen Gene Prioritization: Simple Protein Baselines Suffice**.
+Core implementation for **SeqPatho-Plant: A DNA-centered multi-view framework for plant pathogen gene prioritization**.
 
-The repository contains the matched DNA–protein and protein-only heads, frozen sequence encoding, cached training, and the principal baseline and supplementary analyses. The code corresponds to the 1,116-record evidence-linked cohort with the frozen `taxid_evidence_1116` partition.
+SeqPatho-Plant starts from nucleotide view construction and strand-aware aggregation, with an additional protein branch for paired input modeling and explicit candidate-budget evaluation. The repository contains the paired and protein-only heads, frozen sequence encoding, cached training, and the principal baseline and supplementary analyses. The code corresponds to the 1,116-record evidence-linked cohort with the frozen `taxid_evidence_1116` partition. The matched controls assess representation contributions; DNA-centered describes the design starting point, not an established advantage over the protein-only control.
 
 This is a **code-only release**. Sequence data, manifests, cached embeddings, checkpoints, prediction archives, figures and manuscript files are external inputs or generated outputs. They are not included in this repository. The commands below require the separately held evaluation archive accompanying the manuscript; a public download of that archive is not provided by this release. See [DATA_FORMAT.md](DATA_FORMAT.md) for the input contract.
 
